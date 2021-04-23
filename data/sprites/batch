@@ -1,0 +1,8 @@
+layout sprite
+
+input   "ball.png"
+output  "ball.4bpp"
+tiles 0 0 2 2
+input   "paddle.png"
+output  "paddle.4bpp"
+tiles 0 0 1 4
