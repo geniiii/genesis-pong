@@ -1,3 +1,15 @@
 = genesis-pong
 
-Old and unfinished Pong clone for the Sega Genesis, written in 68k assembly
+[%hardbreaks%]
+Old and unfinished Pong clone for the Sega Genesis, written in Motorola 68k assembly. Contains all the weird micro-optimizations and workarounds for assembler bugs I could fit into something this small.
+I don't see myself ever finishing this, but I guess it could be a half-decent learning resource for someone.
+
+== Building
+* Place `asw` and `p2bin` from http://john.ccac.rwth-aachen.de:8000/as/[The Macroassembler AS] somewhere in your `PATH`
+* Place `romfix` from Sik's https://github.com/sikthehedgehog/mdtools[mdtools] somewhere in your `PATH`
+* Run `make all` and pray it works
+
+== Credits
+[%hardbreaks%]
+Flamewing for their https://gist.github.com/flamewing/ac4b8586f74c74fe24fe30e5e0261fb0[DMA macros] and https://github.com/flamewing/ultra-dma-queue[ultra-dma-queue]
+Sik for https://www.plutiedev.com/[Plutiedev] and https://github.com/sikthehedgehog/mdtools[mdtools]
