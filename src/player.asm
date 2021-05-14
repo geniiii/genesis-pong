@@ -4,10 +4,10 @@ p2_x: equ vdp_screen_width - spr_paddle_w_px
 player_speed: equ 3
 
 Player_Add macro p
-    move.w #p_x, d0
-    moveq  #(vdp_screen_height - spr_paddle_h_px) / 2, d1
-    moveq  #obj_type_p, d2
-    jsr Object_Add
+	move.w #p_x, d0
+	moveq  #(vdp_screen_height - spr_paddle_h_px) / 2, d1
+	moveq  #obj_type_p, d2
+	jsr Object_Add
 	move.l a0, p
 	endm
 
@@ -21,11 +21,11 @@ Player_Add macro p
 ;****************************************************************************
 Player_AddSprite macro flags=0
 	move.w  Obj.Pos_X(a0), d0
-    move.w  Obj.Pos_Y(a0), d1
+	move.w  Obj.Pos_Y(a0), d1
 	move.w  #tile_paddle_id | flags, d2
 	moveq   #spr_paddle_size, d3
 	jsr	    Spr_Add
-    endm
+	endm
 
 P1_Draw:
 	Player_AddSprite spr_hflip

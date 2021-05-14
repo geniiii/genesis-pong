@@ -434,4 +434,4 @@ DMA_FillVRAM macro byte, addr, length
 	btst	#1,d1
 	bne.s	.Loop ; busy loop until the VDP is finished filling...
 	move.w	#$8F02,(a5) ; VRAM pointer increment: $0002
-    endm
+	endm

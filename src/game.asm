@@ -3,16 +3,16 @@
 	include "palettes.asm"
 	include "tiles.asm"
 	include "states/ingame.asm"
-    
+	
 Game_Main:
-    moveq #0, d0
-    lea Palette, a0
-    jsr VDP_LoadPalette
+	moveq #0, d0
+	lea Palette, a0
+	jsr VDP_LoadPalette
 
-    moveq #0, d0
-    moveq #tiles_count, d1
-    lea Tiles, a0
-    jsr VDP_LoadTiles
+	moveq #0, d0
+	moveq #tiles_count, d1
+	lea Tiles, a0
+	jsr VDP_LoadTiles
 
 	; Clear trashed d0 and d1
 	moveq #0, d0
@@ -36,4 +36,4 @@ Game_NextFrame:
 	rts
 
 Game_HINT:
-    rte
+	rte
