@@ -7,11 +7,6 @@ input_p1_held:  ds.b 1
 input_p2_press:	ds.b 1
 input_p2_held:  ds.b 1
 
-p1_y:		 ds.w 1
-p2_y:		 ds.w 1
-p1_score:	 ds.b 1
-p2_score:	 ds.b 1
-
 spr_num:     ds.w 1
 spr_table:	 ds.w spr_table_size_w
 
@@ -19,6 +14,8 @@ obj_list: Obj [obj_max]
 ; Pointers to player objects
 p1:		  ds.l 1
 p2:		  ds.l 1
+p1_score:	 ds.b 1
+p2_score:	 ds.b 1
 
 ingame_state:      ds.b 1
 ingame_state_over: ds.b 1

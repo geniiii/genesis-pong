@@ -66,7 +66,6 @@ VDP_Clear:
 
     ; Clear VRAM
     DMA_FillVRAM 0, 0, vdp_vram_size_b
-    
 
     ; Clear CRAM
     ; DMA fill to CRAM/VSRAM is possible but apparently quite buggy, so we do this instead
