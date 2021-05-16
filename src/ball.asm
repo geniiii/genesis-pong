@@ -54,7 +54,7 @@ Ball_Update:
 	; Player 1 scored, reset ball and paddles
 	add.b  #1, p1_score
 	move.b #ingame_over_scored, ingame_state_over
-	bra.s .End 
+	bra.s .End
 
 ; Check left
 .CheckLeft:
@@ -63,7 +63,7 @@ Ball_Update:
 	; Player 2 scored, reset ball and paddles
 	add.b #1, p2_score
 	move.b #ingame_over_scored, ingame_state_over
-	bra.s .End 
+	bra.s .End
 
 .WritePos:
 	swap d0
