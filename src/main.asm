@@ -7,7 +7,7 @@
 	include "ram.asm"
 	include "header.asm"
 	include "input.asm"
-	include "object.asm"
+	include "entity.asm"
 	include "sprite/constants.asm"
 	include "memmap.asm"
 	include "dma.asm"
@@ -42,7 +42,6 @@ CPU_EntryPoint:
 	beq.s  .SkipTMSS   ; If version = 0, skip
 	move.l #'SEGA', $A14000
 .SkipTMSS:
-	rts
 
 	jsr Input_Init
 

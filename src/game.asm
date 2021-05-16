@@ -27,7 +27,7 @@ Game_NextFrame:
 	jsr Input_Update
 
 	jsr Spr_ClearTable
-	jsr Object_Draw
+	jsr Entity_Draw
 	jsr Spr_UpdateTable
 
 	jsr VDP_WaitForVSync

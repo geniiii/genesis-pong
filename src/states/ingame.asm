@@ -15,7 +15,7 @@ Ingame_Init:
 	; Clears both ingame_state and ingame_state_over
 	clr.w ingame_state
 
-	jsr Object_ClearAll
+	jsr Entity_ClearAll
 
 	jsr Ball_Add
 	Player_Add p1
@@ -33,7 +33,7 @@ Ingame_Update:
 	btst.b #ingame_paused, ingame_state
 	bne.s  .Paused
 
-	bsr.w Object_Update
+	bsr.w Entity_Update
 .Paused:
 	jsr   Game_NextFrame
 
